@@ -1,0 +1,3 @@
+- **Nama**  : Ghaida Fasya Yuthika Afifah  
+- **NPM**   : 714220031
+- **Kelas** : D4 Teknik Informatika - 3B
