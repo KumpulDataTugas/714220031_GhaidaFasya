@@ -1,0 +1,1 @@
+D:\KULIAH\Semester6\AI\714220031_GhaidaFasya\BahasaPemrogramanRust\8\rust_web_service\target\debug\web_service_rust.exe: D:\KULIAH\Semester6\AI\714220031_GhaidaFasya\BahasaPemrogramanRust\8\rust_web_service\src\main.rs
