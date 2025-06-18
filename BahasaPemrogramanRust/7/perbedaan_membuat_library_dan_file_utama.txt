@@ -1,0 +1,60 @@
+/*
+=======================================================
+🆚 Perbedaan `main.rs` dan `lib.rs` dalam Proyek Rust
+=======================================================
+
+📁 Struktur Folder:
+└── src/
+    ├── main.rs   --> File utama untuk binary (executable)
+    └── lib.rs    --> File library untuk kumpulan fungsi/reusable logic
+
+-------------------------------------------------------
+🟢 main.rs
+-------------------------------------------------------
+- Berfungsi sebagai titik masuk (entry point) dari program.
+- Harus memiliki fungsi `fn main()`.
+- Dijalankan dengan perintah: `cargo run`.
+- Menghasilkan file executable (.exe / binary) di folder `target/debug`.
+
+Contoh:
+fn main() {
+    println!("Ini adalah program utama.");
+}
+
+-------------------------------------------------------
+🔵 lib.rs
+-------------------------------------------------------
+- Berfungsi sebagai library / kumpulan modul / fungsi.
+- Tidak membutuhkan `fn main()`.
+- Biasanya digunakan untuk menyimpan logic yang bisa di-*import* ke main.rs atau proyek lain.
+- Bisa di-*test* dan di-*reuse* lebih mudah.
+
+Contoh:
+pub fn halo(nama: &str) -> String {
+    format!("Halo, {}!", nama)
+}
+
+Kemudian di main.rs:
+use nama_proyek::halo;
+
+fn main() {
+    println!("{}", halo("Ghaida"));
+}
+
+-------------------------------------------------------
+📌 Kesimpulan
+-------------------------------------------------------
+🟢 Gunakan `main.rs` jika:
+  - Kamu ingin membuat executable (CLI tool, aplikasi sederhana).
+  - Kamu akan menjalankan langsung dengan `cargo run`.
+
+🔵 Gunakan `lib.rs` jika:
+  - Kamu ingin menulis library / modul terpisah.
+  - Kamu ingin menulis kode yang reusable dan bisa dites.
+  - Kamu ingin memisahkan logic dari file utama.
+
+✅ Proyek Rust bisa punya KEDUANYA:
+  - `main.rs` untuk run
+  - `lib.rs` untuk logic & reusability
+
+*/

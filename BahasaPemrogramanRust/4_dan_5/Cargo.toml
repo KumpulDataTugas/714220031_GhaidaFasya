@@ -1,0 +1,11 @@
+[package]  # Blok utama metadata tentang paket atau proyek Rust ini
+name = "project_name"  # Nama proyek atau crate (hasil build = target/debug/project_name)
+version = "0.1.0"  # Versi proyek saat ini, mengikuti format semver
+edition = "2024"  # Edisi bahasa Rust yang digunakan (2021/2024) — berpengaruh ke fitur dan syntax
+
+authors = ["Ghaida <714220031@std.ulbi.ac.id>"]  # Informasi pembuat (optional tapi berguna untuk publikasi)
+description = "Proyek belajar Rust"  # Deskripsi singkat tentang proyek
+license = "MIT"  # Lisensi kode sumber proyek ini
+
+[dependencies]  # Bagian ini menyimpan daftar crate (library) eksternal yang dibutuhkan proyek
+chrono = "0.4"  # Tambahkan crate chrono versi 0.4 untuk mengelola waktu dan tanggal
